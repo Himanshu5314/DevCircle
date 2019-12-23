@@ -1,0 +1,4 @@
+-->each time a user registers(or logs in) jwt(json wb token) is created
+-->once the jwt is created, the middleware auth(function that deals with the request response cycles) then stores the correspoding user details that it gets from the token into the req.user so that the details can be used can be used by other functions of the website
+-->this middleware auth also validates the token it gets from res.json of users.js(registering user) or the auth.js(validating user) and hence it is also used by various private functions as a protection(as these functions should only run if a valid token exists)
+-->once private functions validate jwt using middleware auth, they can now perform various funtions like add, view, edit profile, add posts, etc..
